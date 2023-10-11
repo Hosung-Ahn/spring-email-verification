@@ -14,6 +14,8 @@ public class EmailSendService {
 
     public void sendEmail(String toEmail, String title, String context) {
         SimpleMailMessage emailForm = createEmailForm(toEmail, title, context);
+        // 버그가 발생하지 않는다고 가정
+        // 이메일을 전송했을 때 알 수 없는 버그의 예외처리 필요
         emailSender.send(emailForm);
     }
 
